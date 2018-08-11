@@ -56,9 +56,9 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
         viewHolder.viewHolderIndex.setText("ViewHolder index: " + viewHolderCount);
 
-       /* int backgroundColorForViewHolder = ColorUtils
+        int backgroundColorForViewHolder = ColorUtils
                 .getViewHolderBackgroundColorFromInstance(context, viewHolderCount);
-        viewHolder.itemView.setBackgroundColor(backgroundColorForViewHolder);*/
+        viewHolder.itemView.setBackgroundColor(backgroundColorForViewHolder);
 
         viewHolderCount++;
         Log.d(TAG, "onCreateViewHolder: number of ViewHolders created: "
@@ -66,11 +66,13 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         return viewHolder;
     }
 
+
     @Override
     public void onBindViewHolder(NumberViewHolder holder, int position) {
         Log.d(TAG, "#" + position);
         holder.bind(position);
     }
+
 
     @Override
     public int getItemCount() {
@@ -101,4 +103,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
             mOnClickListener.onListItemClick(clickedPosition);
         }
     }
+
+
+    // end
 }
